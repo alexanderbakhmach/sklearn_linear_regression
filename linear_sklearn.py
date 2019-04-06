@@ -5,6 +5,10 @@ from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plot
 from sklearn.metrics import r2_score
 
+"""
+    Linear regression example
+    With Kaggle dataset https://www.kaggle.com/budincsevity/szeged-weather
+"""
 
 DATASET_PATH = 'data.csv'
 RANGE = 0.1
@@ -37,14 +41,3 @@ model.fit(x_train, y_train)
 # Get predictions
 train_pred = model.predict(x_train)
 test_pred = model.predict(x_test)
-
-print('coef - {} , inter - {}'.format(model.coef_, model.intercept_))
-
-# Visualize data
-plot.scatter(x_test, y_test, color = 'blue')
-plot.plot(x_test, test_pred)
-plot.title('Dependancy between salnty and temperature')
-plot.xlabel('Salnty')
-plot.ylabel('Temperature')
-plot.show()
-
