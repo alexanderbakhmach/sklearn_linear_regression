@@ -5,10 +5,6 @@ from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plot
 from sklearn.metrics import r2_score
 
-"""
-    Linear regression example
-    With Kaggle dataset https://www.kaggle.com/budincsevity/szeged-weather
-"""
 
 DATASET_PATH = 'data.csv'
 RANGE = 0.1
